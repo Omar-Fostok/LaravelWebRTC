@@ -4,38 +4,33 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>PeerChat</title>
+    <title>Ivy Streams</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='{{ asset('assets/css/main.css') }}'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ asset('assets/css/main.css') }}">
 </head>
 
 <body>
 
-    <div id="videos">
-        <video class="video-player" id="user-1" autoplay playsinline></video>
-        <video class="video-player" id="user-2" autoplay playsinline></video>
-    </div>
+    <button id="join-btn">Join Stream</button>
 
-    <div id="controls">
+    <div id="stream-wrapper">
+        <div id="video-streams"></div>
 
-        <div class="control-container" id="camera-btn">
-            <img src="{{ asset('assets/icons/camera.png') }}" />
+        <div id="stream-controls">
+            <button id="leave-btn">Leave Stream</button>
+            <button id="mic-btn">Mic On</button>
+            <button id="camera-btn">Camera on</button>
         </div>
-
-        <div class="control-container" id="mic-btn">
-            <img src="{{ asset('assets/icons/mic.png') }}" />
-        </div>
-
-        <a href="/">
-            <div class="control-container" id="leave-btn">
-                <img src="{{ asset('assets/icons/phone.png') }}" />
-            </div>
-        </a>
-
     </div>
 
 </body>
-<script src='{{ asset('assets/js/agora-rtm-sdk-1.4.4.js') }}'></script>
-<script src='{{ asset('assets/js/main.js') }}'></script>
+<script>
+    const APP_ID = "b447fb0548b847448cd95024a8633a5b"
+    const CHANNEL = "{{ $channel }}"
+    const TOKEN = "{{ $token }}";
+    const user_id = {{ $user_id }};
+</script>
+<script src="{{ asset('assets/js/AgoraRTC_N-4.7.3.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 
 </html>
