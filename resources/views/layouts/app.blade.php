@@ -13,9 +13,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('build/assets/app-DDQR2KfM.css') }}">
-    <script src="{{ asset('build/assets/app-qOltvf0N.js') }}"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <link rel="stylesheet" href="{{ asset('build/assets/app-DDQR2KfM.css') }}"> --}}
+    {{-- <script src="{{ asset('build/assets/app-qOltvf0N.js') }}"></script> --}}
 
 </head>
 
@@ -106,8 +106,8 @@
         </div>
     </div>
 
-    {{-- @vite('resources/js/app.js') --}}
-    <script src="{{ asset('build/assets/app-qOltvf0N.js') }}"></script>
+    @vite('resources/js/app.js')
+    {{-- <script src="{{ asset('build/assets/app-qOltvf0N.js') }}"></script> --}}
 
     <script>
         let channelName;
